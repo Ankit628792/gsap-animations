@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 1 - https://www.youtube.com/watch?v=9PWCNB9Z86s&t=172s&ab_channel=GravityCoding -->
+<!-- 2 - https://www.youtube.com/watch?v=Lpz0_yFk1Lo&ab_channel=GravityCoding -->
+<!-- 3 - https://www.youtube.com/watch?v=ODEaJbxyFrQ&t=124s&ab_channel=GravityCoding -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        section {
+            height: 100dvh;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .font-8 {
+            font-size: 8rem;
+            font-weight: 400;
+        }
+
+        .opacity-30 {
+            opacity: 0.3;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .no-wrap {
+            white-space: nowrap;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .star .svg {
+            mask-image: url('./assets/star.svg');
+            mask-size: 0%;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        }
+        .star .svg2 {
+            mask-image: url('./assets/star.svg');
+            mask-size: 0%;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        }
+
+        .star .img,
+        .star .img2 {
+            width: 100%;
+            height: 100%;
+            background-size: 130%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .star .img {
+            background-image: url('https://axelvanhessche.com/images/peugeot_385.webp');
+        }
+
+        .star .img2 {
+            background-image: url('https://images.unsplash.com/photo-1713124417853-fb2ca69a8898');
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="bg-blue-200"></section>
+    <section class="center">
+        <div class="w-full text-container">
+            <div class="relative">
+                <div class="font-8 opacity-30 w-full">GreenSock Animation</div>
+                <div class="font-8 absolute left-0 top-0 overflow-hidden no-wrap w-0 fill-text">GreenSock Animation
+                </div>
+            </div>
+            <div class="relative">
+                <div class="font-8 opacity-30">Welcome to AK World</div>
+                <div class="font-8 absolute left-0 top-0 no-wrap overflow-hidden w-0 fill-text2">Welcome to AK World
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="star">
+        <div class="w-full h-screen svg">
+            <div class="img">
+                <div class="w-full h-screen svg2">
+                    <div class="img2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section></section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        //         const lenis = new Lenis()
+
+        // lenis.on('scroll', (e) => {
+        //   console.log(e)
+        // })
+
+        // function raf(time) {
+        //   lenis.raf(time)
+        //   requestAnimationFrame(raf)
+        // }
+
+        // requestAnimationFrame(raf)
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            // console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.text-container',
+                start: '20% 60%',
+                end: 'bottom 50%',
+                scrub: true,
+                // markers: true
+            }
+        })
+
+        tl.to(".fill-text", {
+            width: '100%'
+        })
+        tl.to(".fill-text2", {
+            width: '100%',
+            delay: -0.44
+        })
+
+        let tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.star',
+                start: '50% 50%',
+                end: '250% 50%',
+                scrub: true,
+                pin: true,
+                // markers: true
+            }
+        })
+        tl2.to(".star .svg", {
+            maskSize: '200%'
+        }, 'a')
+        tl2.to(".star .img", {
+            backgroundSize: '100%'
+        }, 'a')
+
+        tl2.to(".star .svg2", {
+            maskSize: '200%'
+        }, 'b')
+        tl2.to(".star .img2", {
+            backgroundSize: '100%'
+        }, 'b')
+    </script>
+</body>
+
+</html>

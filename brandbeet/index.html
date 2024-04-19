@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandbeet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .row-div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .no-wrap {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="min-h-screen w-full">
+        <nav class="flex items-center justify-between px-10 py-5 fixed top-0 left-0 w-full mix-blend-difference z-50">
+            <div
+                class="logo text-3xl group h-10 flex flex-col items-center justify-start overflow-hidden cursor-pointer">
+                <h1 class="text-white group-hover:-mt-9 transition-all duration-300 ease-in-out">Brandbeet</h1>
+                <h1 class="text-white">Brandbeet</h1>
+            </div>
+            <div class="logo text-lg group h-7 flex flex-col items-center justify-start overflow-hidden cursor-pointer">
+                <h1 class="text-white group-hover:-mt-7 transition-all duration-300 ease-in-out">contact@ankit.dev</h1>
+                <h1 class="text-white">contact@ankit.dev</h1>
+            </div>
+        </nav>
+
+        <div class="overlay-div fixed inset-0 z-10 flex flex-col items-center justify-center bg-transparent">
+            <h1 class="text-white text-9xl opacity-0">Brandbeet</h1>
+        </div>
+        <div class="part-1 w-full h-screen overflow-hidden bg-black sticky top-0">
+            <div class="content-part-1 w-full h-screen flex items-start justify-center">
+                <div class="bg-black overlay z-10 opacity-20 absolute inset-0"></div>
+                <div class="z-30 absolute max-w-max bottom-10 left-1/2 transform -translate-x-1/2">
+                    <h1 class="text-sm uppercase text-white">Scroll Down</h1>
+                    <div class="rounded-full bg-gray-200 h-0.5 bg-opacity-30 relative overflow-hidden">
+                        <div class="scroll-bg absolute left-0 top-0 h-full w-0 bg-white"></div>
+                    </div>
+                </div>
+                <div
+                    class="rotate-div transform scale-100 flex items-center justify-center w-[200vw] h-[200vh] bg-black gap-8">
+                    <div id="row-div-1" class="row-div w-[40vw] h-full flex flex-col gap-8 ">
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd8fa4742b8e1f3b6b8_LAYOUT-8-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fe0c7e42cfe703_LAYOUT-13-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fee0b8d4e3a73c_LAYOUT-6-p-500.jpg"
+                                alt="">
+
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9fa4742b8e1f3b6f6_LAYOUT-7-p-500.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div id="row-div-2" class="row-div w-[40vw] h-full flex flex-col gap-8 -mt-[4%] ">
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd8fa4742b8e1f3b6b8_LAYOUT-8-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fe0c7e42cfe703_LAYOUT-13-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fee0b8d4e3a73c_LAYOUT-6-p-500.jpg"
+                                alt="">
+
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9fa4742b8e1f3b6f6_LAYOUT-7-p-500.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div id="row-div-3" class="row-div w-[40vw] h-full flex flex-col gap-8 -mt-[6%]">
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd8fa4742b8e1f3b6b8_LAYOUT-8-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fe0c7e42cfe703_LAYOUT-13-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fee0b8d4e3a73c_LAYOUT-6-p-500.jpg"
+                                alt="">
+
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9fa4742b8e1f3b6f6_LAYOUT-7-p-500.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div id="row-div-4" class="row-div w-[40vw] h-full flex flex-col gap-8 -mt-[8%]">
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd8fa4742b8e1f3b6b8_LAYOUT-8-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fe0c7e42cfe703_LAYOUT-13-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fee0b8d4e3a73c_LAYOUT-6-p-500.jpg"
+                                alt="">
+
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9fa4742b8e1f3b6f6_LAYOUT-7-p-500.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div id="row-div-5" class="row-div w-[40vw] h-full flex flex-col gap-8 -mt-[10%] ">
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd8fa4742b8e1f3b6b8_LAYOUT-8-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fe0c7e42cfe703_LAYOUT-13-p-500.jpg"
+                                alt="">
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9e3fee0b8d4e3a73c_LAYOUT-6-p-500.jpg"
+                                alt="">
+
+                        </div>
+                        <div class="img w-full h-[25%] bg-black rounded-lg overflow-hidden">
+                            <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64ba4bd9fa4742b8e1f3b6f6_LAYOUT-7-p-500.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="min-h-screen z-20 relative part-2 bg-white">
+        <div class="h-60 w-full overflow-hidden relative round-box transform -translate-y-60">
+            <div class="bg-white w-[200%] h-[1000%] rounded-full absolute transform left-1/2 -translate-x-1/2">
+            </div>
+        </div>
+
+        <div class="p-10 min-h-screen flex flex-col justify-between">
+            <div></div>
+            <div>
+                <div class="text-8xl relative h-32">
+                    <h1 class="opacity-30">Strategic design solutions</h1>
+                    <h1 class="text absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">Strategic design solutions
+                    </h1>
+                </div>
+                <div class="text-8xl relative h-32 ml-20">
+                    <h1 class="opacity-30">that fuel your bottom line.</h1>
+                    <h1 class="text2 absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">that fuel your bottom
+                        line.
+                    </h1>
+                </div>
+            </div>
+            <div class="w-full flex items-center justify-between">
+                <h1 class="text-2xl text-gray-400">Unlock profit with monthly design sprints.</h1>
+                <div class="flex items-center gap-6">
+                    <button class="rounded-full py-5 px-8 bg-black text-white">Book a demo</button>
+                    <button class="rounded-full py-5 px-8 bg-gray-300 ">View Pricing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="w-full flex items-center justify-around bg-black p-10">
+        <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b178fee7b486cf8fa72268_Vector.svg"
+            alt="">
+        <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b178fef884e67ba66aac09_Vector-1.svg"
+            alt="">
+        <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b178fe505e4ce593209844_Vector-2.svg"
+            alt="">
+        <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b178fe1889b6f78eb198ae_Vector-3.svg"
+            alt="">
+        <img src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b178feb68adb8257d5b442_Vector-4.svg"
+            alt="">
+
+    </div>
+
+    <section class="min-h-screen bg-white"></section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            // console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 600)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+
+        let tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.part-2',
+                start: '80% 100%',
+                end: '150% 0%',
+                scrub: true,
+                markers: true
+            }
+        })
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.part-1',
+                start: 'top top',
+                end: '200% 50%',
+                scrub: true,
+                pin: true,
+            }
+        })
+      
+        tl.to(".content-part-1 .overlay", {
+            opacity: 0
+        }, 'b')
+        tl.to('.rotate-div', {
+            marginTop: "-5%"
+        }, 'b')
+        tl.to('.rotate-div', {
+            rotate: -15,
+            scale: 0.8,
+        }, 'a')
+        tl.to('#row-div-2', {
+            marginTop: "-25%"
+        }, 'a')
+        tl.to('#row-div-3', {
+            marginTop: "-20%"
+        }, 'a')
+        tl.to('#row-div-4', {
+            marginTop: "-25%"
+        }, 'a')
+        tl.to('#row-div-5', {
+            marginTop: "-20%"
+        }, 'a')
+        tl.to(".overlay-div h1", {
+            opacity: 1,
+            delay: 0.2
+        }, 'a')
+        tl.to(".overlay-div", {
+            backgroundColor: "#000000b4",
+            delay: 0.3
+        }, 'a')
+
+        tl.to(".scroll-bg", {
+            width: '100%'
+        }, 'a')
+
+        tl2.to(".overlay-div", {
+            backgroundColor: "#000000",
+            delay: 1
+        }, 'c')
+        tl2.to(".overlay-div h1", {
+            opacity: 0
+        })
+
+        tl2.to(".round-box", {
+            height: 100,
+            translateY: 0
+        })
+
+        tl2.to(".overlay-div", {
+            display: 'none'
+        })
+        tl2.to(".part-2 .text", {
+            width: '100%'
+        }, 'text')
+        tl2.to(".part-2 .text2", {
+            width: '100%',
+            delay: 0.1
+        }, 'text')
+
+
+
+    </script>
+
+</body>
+
+</html>
