@@ -164,13 +164,13 @@
 
     </section>
 
-    <section class="min-h-screen z-20 relative part-2 bg-white">
-        <div class="h-60 w-full overflow-hidden relative round-box transform -translate-y-60">
+    <section class="min-h-screen z-20 relative part-2 ">
+        <div class="h-60 w-full overflow-hidden relative round-box transform -mt-60 bg-transparent">
             <div class="bg-white w-[200%] h-[1000%] rounded-full absolute transform left-1/2 -translate-x-1/2">
             </div>
         </div>
 
-        <div class="p-10 min-h-screen flex flex-col justify-between">
+        <div class="p-10 min-h-screen flex flex-col justify-between bg-white">
             <div></div>
             <div>
                 <div class="text-8xl relative h-32">
@@ -213,7 +213,79 @@
 
     </div>
 
-    <section class="min-h-screen bg-white"></section>
+    <section class="h-screen w-full part-4 flex items-start">
+        <div class="h-[100%] px-10 w-1/2 flex flex-col justify-center gap-8">
+            <h1 class="text-8xl">Expected Outcomes</h1>
+            <div class="w-28 h-28 circle-img rounded-full bg-gray-200 grid place-items-center">
+                <img class="w-1/3 h-1/3 transform rotate-0"
+                    src="https://assets-global.website-files.com/64b117fb0e09e8ce5768e4fe/64b7d30aa9b24259d10be24d_symbol.svg"
+                    alt="">
+            </div>
+        </div>
+        <div class="w-1/2 h-[200%] flex flex-col gap-40 mt-[25%] px-10">
+            <div class="content1 opacity-0">
+                <h1 class="text-5xl my-10">Growth and ROI 1</h1>
+                <p class="text-2xl max-w-2xl text-gray-500 font-light">Expect a team that looks at problems
+                    holistically. A team that designs
+                    solutions directly
+                    contributing to your revenue growth and business success - not just pretty pictures.</p>
+            </div>
+            <div class="content2 opacity-0">
+                <h1 class="text-5xl my-10">Top tier designers</h1>
+                <p class="text-2xl max-w-2xl text-gray-500 font-light">Expect the 1% only. Recruited from a global
+                    talent pool you’ll have access to some truly talented designers. Heavily vetted - we’ve hired the
+                    best to serve the great.</p>
+            </div>
+            <div class="content3 opacity-0">
+                <h1 class="text-5xl my-10">Stress free design</h1>
+                <p class="text-2xl max-w-2xl text-gray-500 font-light">
+                    Expect no extra charge if things need changing. It’s all about you. It’ll be iterated on until you
+                    are 100% happy. Once done expect design you and your mom can be proud of.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="min-h-[80dvh] part-5 flex flex-col items-center justify-between">
+        <h1 class="text-4xl text-gray-500 summ">In summary..</h1>
+        <div>
+            <div class="text-8xl relative h-32">
+                <h1 class="opacity-30">A dedicated team at</h1>
+                <h1 class="text absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">A dedicated team at
+                </h1>
+            </div>
+            <div class="text-8xl relative h-32 ml-20">
+                <h1 class="opacity-30">your disposal.</h1>
+                <h1 class="text2 absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">your disposal.
+                </h1>
+            </div>
+        </div>
+        <h1 class="opacity-0 h-60">In summary..</h1>
+    </section>
+
+    <section class="min-h-screen flex flex-col justify-center p-10 part-6 bg-[#f5f5f5] relative">
+        <div class="h-[100px] w-full overflow-hidden absolute top-0 left-0 w-full transform round-box">
+            <div class=" w-[150%] h-[1500%] rounded-full absolute bottom-0 transform left-1/2 -translate-x-1/2 bg-white">
+            </div>
+        </div>
+        <div>
+            <div class="text-8xl relative h-32">
+                <h1 class="opacity-30">Design services for</h1>
+                <h1 class="text absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">Design services for
+                </h1>
+            </div>
+            <div class="text-8xl relative h-32 ml-20">
+                <h1 class="opacity-30">profitable outcomes</h1>
+                <h1 class="text2 absolute h-full top-0 left-0 no-wrap overflow-hidden w-0">profitable outcomes
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="min-h-screen">
+
+    </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -237,8 +309,8 @@
         let tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: '.part-2',
-                start: '50% 50%',
-                end: '140% 0%',
+                start: '90% 0%',
+                end: '200% 10%',
                 scrub: true,
             }
         })
@@ -246,7 +318,7 @@
             scrollTrigger: {
                 trigger: '.part-1',
                 start: 'top top',
-                end: '200% 50%',
+                end: '250% 50%',
                 scrub: true,
                 pin: true,
             }
@@ -291,19 +363,17 @@
             backgroundColor: "#000000",
             delay: 1
         }, 'c')
-        tl2.to(".round-box", {
-            height: 50,
+        tl2.to(".part-2 .round-box", {
+            height: 0,
             translateY: 0,
-            delay: 0.5
+            // delay: 0.5,
+            marginTop: 0
         })
         tl2.to(".overlay-div h1", {
             opacity: 0
         })
 
 
-        tl2.to(".overlay-div", {
-            display: 'none'
-        })
         tl2.to(".part-2 .text", {
             width: '100%'
         }, 'text')
@@ -323,9 +393,108 @@
             }
         }, 'text')
 
+        tl2.to(".overlay-div", {
+            display: 'none',
+            delay: -0.5
+        })
+
+        let tl4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.part-4',
+                start: '50% 50%',
+                end: '200% 50%',
+                scrub: true,
+                pin: true,
+                // pinSpacing: true
+            }
+        })
+
+        tl4.to(".content1", {
+            marginTop: "-25%",
+            opacity: 1
+        }, 'sct-1')
+
+        tl4.to(".content2", {
+            opacity: 1
+        }, 'sct-2')
+        tl4.to(".content1", {
+            opacity: 0,
+            marginTop: "-100"
+        }, 'sct-2')
+
+        tl4.to(".content3", {
+            opacity: 1,
+            marginTop: "-100"
+        }, 'sct-3')
+        tl4.to(".content2", {
+            opacity: 0,
+            marginTop: "-25%"
+        }, 'sct-3')
+
+        tl4.to(".content3", {
+            opacity: 0,
+            marginTop: "-75%"
+        }, 'circle')
+
+        tl4.to(".circle-img", {
+            rotate: 120
+        }, 'sct-1')
+        tl4.to(".circle-img", {
+            rotate: 240
+        }, 'sct-2')
+        tl4.to(".circle-img", {
+            rotate: 360
+        }, 'sct-3')
+
+        tl4.to(".circle-img", {
+            marginLeft: "100%",
+            rotation: 720
+        }, 'circle')
 
 
+        let tl5 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.part-5',
+                start: 'bottom 200%',
+                end: '100% 50%',
+                scrub: true,
+            }
+        })
 
+        tl5.to(".summ", {
+            translateY: -100
+        })
+
+        tl5.to(".part-5 .text", {
+            width: '100%'
+        }, 'text2')
+        tl5.to(".part-5 .text2", {
+            width: '100%',
+            delay: 0.1,
+        }, 'text2')
+
+
+        let tl6 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.part-6',
+                start: 'top 60%',
+                end: '80% 40%',
+                scrub: true,
+            }
+        })
+
+        tl6.to(".part-6 .round-box", {
+            height: 0,
+            marginTop: 0
+        })
+
+        tl6.to(".part-6 .text", {
+            width: '100%'
+        }, 'text3')
+        tl6.to(".part-6 .text2", {
+            width: '100%',
+            delay: 0.1,
+        }, 'text3')
     </script>
 
 </body>
