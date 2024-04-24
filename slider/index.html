@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Syncopate", sans-serif;
+        }
+
+        body {
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+        .title span {
+            display: block;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+
+
+        .gsap_track {
+            will-change: transform;
+        }
+
+        .gsap_item {
+            position: relative;
+            flex: 0 0 auto;
+            width: 400px;
+            height: 550px;
+            background: #000;
+            will-change: transform;
+            overflow: hidden;
+        }
+
+        .gsap_item+.gsap_item {
+            margin-left: 50px;
+        }
+
+        .gsap_item:first-child {
+            width: 40vw !important;
+            background-color: rebeccapurple;
+        }
+
+        .gsap_item_img {
+            position: absolute;
+            width: 900px;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            transform: translate(-60%, -50%);
+        }
+
+        .gsap_item_img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            scale: 1.3;
+        }
+
+        .gsap_item_txt {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            z-index: 2;
+            font-size: 50px;
+            color: white;
+            mix-blend-mode: difference;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="wrapper p-10 relative">
+        <div class="header">
+            <div class="content">
+                <h1 class="uppercase text-7xl font-bold text-white title max-w-7xl mx-auto my-20">gsap scroll
+                    <span>Slider</span>
+                </h1>
+            </div>
+        </div>
+
+        <main>
+            <section class="gsap_slider">
+                <div class="content w-full">
+                    <div class="section_slider gsap_h h-auto">
+                        <div class="gsap_bl">
+
+                            <div class="gsap_inner flex">
+                                <div class="gsap_track flex">
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1712512162392-d523620fbaa2"
+                                                alt="">
+                                        </span>
+                                        <div class="gsap_item_txt">
+                                            <span class="gsap_item_title font-bold">Creative image</span>
+                                        </div>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1712673535607-d3586895d914"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1708261432863-41fdab7b5de9"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1713734629481-1cefab24e325"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1691486716134-dab0178847a5"
+                                                alt="">
+                                        </span>
+                                    </div>
+
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1712673535607-d3586895d914"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1708261432863-41fdab7b5de9"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1713734629481-1cefab24e325"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                    <div class="gsap_item">
+                                        <span class="gsap_item_img">
+                                            <img src="https://images.unsplash.com/photo-1691486716134-dab0178847a5"
+                                                alt="">
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class=" text-white text-lg py-40 leading-loose">
+                <h1 class="text-5xl font-semibold mb-10">Heading</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cum provident sequi vel sed ipsam optio
+                    sint totam sit ipsum, ducimus voluptatum omnis nobis esse qui nemo in maiores magnam?
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero accusamus consequuntur numquam
+                    corporis? Ipsa libero iste at! Debitis, laboriosam minus!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam beatae, ab perspiciatis atque
+                    sapiente aspernatur laboriosam illo delectus expedita sed similique corrupti odit ipsa eos!</p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cum provident sequi vel sed ipsam optio
+                    sint totam sit ipsum, ducimus voluptatum omnis nobis esse qui nemo in maiores magnam?
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero accusamus consequuntur numquam
+                    corporis? Ipsa libero iste at! Debitis, laboriosam minus!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam beatae, ab perspiciatis atque
+                    sapiente aspernatur laboriosam illo delectus expedita sed similique corrupti odit ipsa eos!</p>
+            </section>
+        </main>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+            integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(function () {
+
+                'use strict';
+
+
+                //Lenis Smooth scroll
+                const lenis = new Lenis({
+                    duration: 1.2
+                })
+
+                lenis.on('scroll', (e) => {
+                    // console.log(e)
+                })
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
+                requestAnimationFrame(raf)
+
+                //Integration Lenis on GSAP ScrollTrigger
+                lenis.on('scroll', ScrollTrigger.update)
+
+                gsap.ticker.add((time) => {
+                    lenis.raf(time * 1000)
+                })
+
+                //Create animation ScrollTrigger
+                function scrollTrig() {
+
+                    gsap.registerPlugin(ScrollTrigger);
+
+                    let gsapBl = $('.gsap_bl').width();
+
+
+                    //Transform slider track
+                    let gsapTrack = $('.gsap_track').width();
+                    let scrollSliderTransform = gsapTrack - gsapBl
+
+                    //Create ScrollTrigger
+                    let scrollTween = gsap.to('.gsap_track', {
+                        scrollTrigger: {
+                            trigger: '.gsap_slider',
+                            start: 'center center',
+                            end: () => '+=' + gsapTrack,
+                            pin: true,
+                            scrub: true
+                        },
+                        x: '-=' + scrollSliderTransform + 'px',
+                        ease: 'none'
+                    });
+
+                    const gsapItem = gsap.utils.toArray(".gsap_item");
+                    gsapItem.forEach((item) => {
+                        const img = $(item).find(".gsap_item_img");
+                        const image = $(img).find("img")
+                        gsap.to(img, {
+                            x: 0,
+                            scale: 1,
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: item,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: true,
+                                containerAnimation: scrollTween
+                            }
+                        }, 'a')
+                        gsap.to(image, {
+                            scale: 1,
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: item,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: true,
+                                containerAnimation: scrollTween
+                            }
+                        }, 'a')
+                    })
+
+                }
+                scrollTrig();
+
+                //resize window
+                const debouncedResize = _.debounce(onWindowResize, 500);
+                function onWindowResize() {
+                    console.log('Window resized!');
+                    location.reload();
+                }
+                $(window).on('resize', debouncedResize);
+            });
+        </script>
+</body>
+
+</html>
