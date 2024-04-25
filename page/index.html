@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+        }
+
+        .bg1 img {
+            width: 100%;
+        }
+
+        #order {
+            font-size: 16px;
+            font-weight: lighter;
+            color: #afafaf;
+        }
+
+        .nav .menu ul li {
+            color: #594637;
+            font-size: 32px;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        #tag {
+            font-size: 18px;
+            color: #afafaf;
+            transition: 0.3s;
+        }
+
+        .nav .menu ul li:hover #tag {
+            color: #a66f2c;
+            transition: 1s;
+        }
+
+        #menu {
+            background: linear-gradient(#5b5b5b, #5b5b5b) left no-repeat, #afafaf;
+            background-size: 0% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.5s;
+        }
+
+        .menu-item:first-child #menu {
+            background-size: 100% 100%;
+        }
+
+        .menu-item:first-child #tag {
+            color: #a66f2c;
+        }
+
+        #menu:hover {
+            background-size: 100% 100%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen w-full bg-orange-200">
+    <div class="wrapper">
+        <div class="outer-content">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <h1 class="uppercase text-white text-2xl title">Minimal Navigation</h1>
+            </div>
+        </div>
+
+        <div class="bg-white fixed w-[10%] h-screen z-10 top-0 left-0 border-r">
+            <div class="toggle-btn absolute top-10 left-1/2 transform -translate-x-1/2">
+                <ion-icon name="menu" class="text-3xl cursor-pointer"></ion-icon>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="images absolute w-[0%] h-screen left-[55%] position-center bg-cover bg-black">
+                <span class="bg bg1">
+                    <img class=" h-full object-cover" src="https://images.unsplash.com/photo-1710971228630-f59c4cb257a8"
+                        alt="">
+                </span>
+                <span class="bg bg2">
+                    <img class=" h-full object-cover" src="https://images.unsplash.com/photo-1698940348904-3ce8e4b84369"
+                        alt="">
+                </span>
+                <span class="bg bg3">
+                    <img class=" h-full object-cover" src="https://images.unsplash.com/photo-1713815713585-e0998fa6c8bf"
+                        alt="">
+                </span>
+                <span class="bg bg4">
+                    <img class=" h-full object-cover" src="https://images.unsplash.com/photo-1698940348904-3ce8e4b84369"
+                        alt="">
+                </span>
+                <span class="bg bg5">
+                    <img class=" h-full object-cover" src="https://images.unsplash.com/photo-1713815713585-e0998fa6c8bf"
+                        alt="">
+                </span>
+            </div>
+
+            <div class="nav">
+                <div class="menu absolute w-[0%] h-screen overflow-hidden left-[10%] bg-white flex flex-col justify-center">
+                    <ul>
+                        <li class="menu-item">
+                            <span id="order">01.</span>
+                            <span id="menu">&nbsp;Home /</span>
+                            <span id="tag">intro</span>
+                        </li>
+                        <li class="menu-item">
+                            <span id="order">02.</span>
+                            <span id="menu">&nbsp;Our Story /</span>
+                            <span id="tag">the building</span>
+                        </li>
+                        <li class="menu-item">
+                            <span id="order">03.</span>
+                            <span id="menu">&nbsp;Portfolio /</span>
+                            <span id="tag">work we've done</span>
+                        </li>
+                        <li class="menu-item">
+                            <span id="order">04.</span>
+                            <span id="menu">&nbsp;Thesis / </span>
+                            <span id="tag">the pursuit</span>
+                        </li>
+                        <li class="menu-item">
+                            <span id="order">05.</span>
+                            <span id="menu">&nbsp;Contact /</span>
+                            <span id="tag">say hello</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const gsapItem = gsap.utils.toArray("#menu");
+        gsapItem.forEach((item, i) => {
+            let firstMenu = document.querySelector(".menu-item #menu")
+            let firstTag = document.querySelector(".menu-item #tag")
+            $(item).hover(function () {
+                gsap.to(".bg1 img", {
+                    width: "0%",
+                    opacity: 0
+                })
+                if (i != 0) {
+                    gsap.to(firstMenu, {
+                        backgroundSize: "0% 100%",
+                        duration: 0.1
+                    })
+                    gsap.to(firstTag, {
+                        color: "#afafaf",
+                        duration: 0.2
+                    })
+                }
+                gsap.to(".bg" + (i + 1) + " img", {
+                    width: "100%",
+                    opacity: 1
+                })
+            }, function () {
+                gsap.to(".bg" + (i + 1) + " img", {
+                    width: "0%",
+                    opacity: 0
+                })
+                if (i != 0) {
+                    gsap.to(firstMenu, {
+                        backgroundSize: "100% 100%",
+                        duration: 0.1
+                    })
+                    gsap.to(firstTag, {
+                        color: "#a66f2c",
+                        duration: 0.2
+                    })
+                }
+                gsap.to(".bg1 img", {
+                    width: "100%",
+                    opacity: 1
+                })
+            });
+        })
+
+        var tl = new TimelineMax({ paused: true });
+
+        tl.to(".outer-content .title", 1, {
+            opacity: 0
+        })
+
+        tl.to(".menu", 2, {
+            width: "45%",
+            paddingLeft: "10%",
+            ease: Expo.easeInOut
+        }, "-=1");
+
+        tl.staggerFrom(".menu ul li", 2, {
+            y: 20, opacity: 0, ease: Expo.easeInOut
+        }, 0.1)
+
+        tl.to(".images", 2, {
+            width: "45%",
+            ease: Expo.easeInOut,
+            delay: -2
+        }, "-=1");
+
+        tl.reverse();
+
+        $(document).on("click", ".toggle-btn", function () {
+            tl.reversed(!tl.reversed())
+        })
+        $(document).on("click", "#menu", function () {
+            tl.reversed(!tl.reversed())
+        })
+
+
+    </script>
+</body>
+
+</html>
