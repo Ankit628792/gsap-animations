@@ -51,6 +51,14 @@
             background-color: #1a1721;
             overflow-x: hidden;
         }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .bg-body {
+            background-color: #1a1721;
+        }
     </style>
 
 </head>
@@ -58,21 +66,26 @@
 <body>
 
     <section class="flex flex-col items-center justify-center min-h-screen loader relative">
-        <div class="w-full h-full transform scale-1 blob absolute inset-0 -top-10 grid place-items-center">
+        <div class="w-full h-full transform scale-110 blob absolute inset-0 -top-10 grid place-items-center">
+            <div class="overlay absolute top-0 left-0 w-full h-full bg-body z-10 transition-all duration-1000 easeInOut"
+                style="clip-path: circle(90.0% at 50% 90%);"></div>
             <spline-viewer background="transparent" class="spline_image w-auto h-auto"
                 url="https://prod.spline.design/A-NjTgHJzriESDAz/scene.splinecode"></spline-viewer>
         </div>
-        <div class="w-full max-w-3xl relative h-32 name flex flex-col items-center justify-center">
-            <h1 class="text-9xl text-white heading absolute top-0 left-0 first h-32">Ank<div class="inline-block">i
+        <div class="w-full max-w-3xl text-8xl lg:text-9xl relative h-24 lg:h-32 name flex flex-col items-center justify-center">
+            <h1 class="text-white heading absolute top-0 left-0 first h-32">Ank<div class="inline-block">i
                 </div>t</h1>
-            <div class="h-0 w-full text-center overflow-hidden occupation flex flex-col gap-10">
-                <h1 class="text-9xl h-40 text-white heading frontend">Frontend</h1>
-                <h1 class="text-9xl h-40 text-white heading">JavaScript</h1>
+            <div class="h-0 w-full text-center overflow-hidden occupation relative">
+                <div class="flex flex-col gap-10 occupation_container">
+                    <h1 class="text-white heading frontend">Frontend</h1>
+                    <h1 class="text-white heading">JavaScript</h1>
+                </div>
             </div>
-            <div
-                class="absolute bottom-0 right-0 h-32 overflow-hidden max-w-max text-right flex flex-col gap-2 last__container">
-                <h1 class="text-9xl text-white heading last">Kumar</h1>
-                <h1 class="text-9xl text-white heading developer">Developer</h1>
+            <div class="absolute bottom-0 right-0 h-32 overflow-hidden max-w-max text-right last__container">
+                <div class="flex flex-col gap-4 relative last">
+                    <h1 class="text-white heading h-full">Kumar</h1>
+                    <h1 class="text-white heading developer">Developer</h1>
+                </div>
             </div>
         </div>
     </section>
@@ -90,6 +103,9 @@
         })
         gsap.ticker.lagSmoothing(0)
 
+        let lastHeight = $('.last').height();
+        let occupationHeight = $('.occupation_container').height();
+
         gsap.to('.name .first div', {
             rotateX: 540,
             duration: 2,
@@ -105,15 +121,15 @@
         })
 
         nameTl.to(".name", {
-            maxWidth: "960px",
+            maxWidth: Math.min(window.innerWidth * 0.8, 960),
             delay: 1.5,
         }, 'a')
         nameTl.to(".name .last", {
-            marginTop: -152,
+            marginTop: (-lastHeight / 2) - 24,
             delay: 2
         }, 'a')
         nameTl.to(".name .last__container", {
-            translateY: 10,
+            translateY: 16,
             delay: 2
         }, 'a')
         nameTl.to(".name", {
@@ -121,12 +137,12 @@
             delay: 1
         })
         nameTl.to(".name .occupation", {
-            height: '140px',
+            height: (occupationHeight / 2),
             delay: 1
         })
 
         nameTl.to(".name .occupation .frontend", {
-            marginTop: -180,
+            marginTop: (-occupationHeight / 2) - 20,
             delay: 1,
         })
         nameTl.to(".name .occupation", {
@@ -147,30 +163,16 @@
         }, 'b')
 
         nameTl.to(".name", {
-            maxWidth: "48rem",
+            maxWidth: Math.min(window.innerWidth * 0.7, 768),
             duration: 1,
             delay: 1,
             marginTop: 500
         }, 'blob')
 
-        // nameTl.to(".blob", {
-        //     width: 400,
-        //     height: 400,
-        //     scale: 1,
-        //     delay: 1,
-        //     duration: 1,
-        //     marginBottom: 40,
-        // }, 'blob')
-
-        // nameTl.to(".name .occupation .frontend", {
-        //     marginTop: -340,
-        //     delay: 1,
-        // })
-        // nameTl.to(".name .occupation .frontend", {
-        //     marginTop: -600,
-        //     delay: 1,
-        // })
-
+        nameTl.to(".blob .overlay", {
+            clipPath: 'circle(0.0% at 50% 90%)',
+            duration: 1,
+        }, 'blob')
 
     </script>
 
