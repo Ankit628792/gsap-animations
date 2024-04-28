@@ -8,17 +8,35 @@ gsap.ticker.lagSmoothing(0)
 
 gsap.registerPlugin(MotionPathPlugin);
 
-let initialPath = `M 10 120 Q 600 120 1200 120`
-let finalPath = `M 10 120 Q 600 120 1200 120`
+let initialPath = `M 10 200 Q 600 200 1200 200`
+let finalPath = `M 10 200 Q 600 200 1200 200`
 let stringPath = document.querySelector(".string");
+let cursor = document.getElementById("cursor");
+let main = document.getElementById("main");
+
+gsap.to(".string path", {
+    attr: {
+        d: `M 10 200 Q 600 200 1200 200`
+    },
+    duration: 3,
+    ease: "power4.in"
+})
 
 stringPath.addEventListener("mousemove", function (el) {
-    initialPath = `M 10 120 Q ${el.x} ${el.y} 1200 120`
+    initialPath = `M 10 200 Q ${el.x} ${el.y} 1200 200`
     gsap.to(".string path", {
         attr: {
             d: initialPath
         },
         duration: 0.5,
+        ease: "power4.out"
+    })
+})
+
+main.addEventListener("mousemove", function (el) {
+    gsap.to(cursor, {
+        x: el.x,
+        y: el.y,
         ease: "power4.out"
     })
 })
@@ -111,4 +129,22 @@ gsap.to(".ball", {
     },
     repeat: -1,
     yoyo: true
-}, 5.1)
+})
+
+
+document.querySelectorAll(".cursor-image").forEach(el => el.addEventListener("mouseenter", function () {
+    gsap.to(cursor, {
+        scale: 4,
+        duration: 0.5,
+        mixBlendMode: 'difference',
+        ease: "power4.out"
+    })
+}))
+document.querySelectorAll(".cursor-image").forEach(el => el.addEventListener("mouseleave", function () {
+    gsap.to(cursor, {
+        scale: 1,
+        duration: 0.5,
+        mixBlendMode: 'none',
+        ease: "power4.out"
+    })
+}))
