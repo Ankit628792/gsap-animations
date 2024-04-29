@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.5em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: burlywood;
+        }
+
+        .images {
+            width: 60%;
+            margin: 10em auto;
+            display: flex;
+            gap: 10em;
+        }
+
+        .col {
+            flex: 1
+        }
+
+        .col:nth-child(2) {
+            margin-top: 15em;
+        }
+
+        .img {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #c5b6af;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            margin-bottom: 10em;
+            overflow: hidden;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 100% !important;
+            object-fit: cover;
+        }
+
+        .blocks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #blocks {
+            background-color: #131313;
+            width: 105vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            overflow: hidden;
+            z-index: 10000;
+        }
+
+        .block {
+            width: 50px;
+            height: 50px;
+            border: 0.5px solid rgba(255, 255, 255, 0.0175);
+            transition: border-color 0.3s ease;
+        }
+
+        .highlight {
+            border-color: #ebfb1d;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            z-index: 2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blocks-container fixed top-0 left-0 w-full h-screen overflow-hidden">
+        <div id="blocks" class=" h-screen w-[105vw] flex content-center justify-start overflow-hidden z-[10000]">
+        </div>
+    </div>
+
+    <div class="content">
+        <nav>
+            <a href="">Block</a>
+            <a href="">Grid</a>
+        </nav>
+
+        <div class="images">
+            <div class="col">
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+                <div class="img">
+                    <img src="https://plus.unsplash.com/premium_photo-1713803863170-436be4feb510" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const blockContainer = document.getElementById("blocks");
+            const blockSize = 50;
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            const numCols = Math.ceil(screenWidth / blockSize);
+            const numRows = Math.ceil(screenHeight / blockSize);
+            const numBlocks = numCols * numRows;
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            function highlightRandomNeighbors() {
+                const index = parseInt(this.dataset.index);
+                const neighbors = [
+                    index - 1,
+                    index + 1,
+                    index - numCols,
+                    index + numCols,
+                    index - numCols - 1,
+                    index - numCols + 1,
+                    index + numCols - 1,
+                    index + numCols + 1,
+                ].filter((i) =>
+                    i >= 0 &&
+                    i < numBlocks &&
+                    Math.abs((i % numCols) - (index % numCols)) <= 1
+                );
+
+                this.classList.add("highlight");
+                setTimeout(() => {
+                    this.classList.remove("highlight");
+                }, 500);
+
+                shuffleArray(neighbors).slice(0, 1).forEach((nIndex) => {
+                    const neighbor = blockContainer.children[nIndex];
+                    if (neighbor) {
+                        neighbor.classList.add("highlight");
+                        setTimeout(() => {
+                            neighbor.classList.remove("highlight");
+                        }, 500);
+                    }
+                })
+
+            }
+
+            function createBlocks() {
+                for (let i = 0; i < numBlocks; i++) {
+                    const block = document.createElement("div");
+                    block.classList.add("block");
+                    block.dataset.index = i;
+                    block.addEventListener("mousemove", highlightRandomNeighbors)
+                    blockContainer.appendChild(block);
+                }
+            }
+
+            createBlocks()
+        })
+    </script>
+</body>
+
+</html>
