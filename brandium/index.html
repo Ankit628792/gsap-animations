@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandium</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 
     <!-- SVG Shapes  -->
@@ -16,12 +17,107 @@
 
     <div id="cursor"></div>
     <main id="main">
+        <div class="scrollAmountContainer fixed z-40 bg-transparnt bottom-0 left-0 p-5 rounded-full">
+            <div
+                class="w-20 h-20 rounded-full bg-black p-4 text-white grid place-items-center overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-0 bg-orange-600 scrollAmount">
+                </div>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-10 h-10 z-10 relative">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                </svg>
+            </div>
+        </div>
+        <div
+            class="full__screen__nav fixed top-0 -right-full bottom-0 w-full max-w-xl bg-black text-white flex flex-col items-center justify-center p-10 sm:px-20 z-50">
+            <div class="flex flex-col w-full gap-5">
+                <div class="mb-6 menuTitle">
+                    <h4 class="text-lg py-2 font-light">Menu</h4>
+                    <div class="h-0.5 border-b-[1px] border-gray-500 w-0 bar"></div>
+                </div>
+                <div class="flex flex-col gap-2 text-5xl leading-normal px-5">
+                    <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                        <h1 class="opacity-0">Home</h1>
+                        <div
+                            class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                            <h1>Home</h1>
+                            <h1 class="text-orange-500">Home</h1>
+                        </div>
+                    </div>
+                    <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                        <h1 class="opacity-0">Work</h1>
+                        <div
+                            class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                            <h1>Work</h1>
+                            <h1 class="text-orange-500">Work</h1>
+                        </div>
+                    </div>
+                    <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                        <h1 class="opacity-0">Services</h1>
+                        <div
+                            class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                            <h1>Services</h1>
+                            <h1 class="text-orange-500">Services</h1>
+                        </div>
+                    </div>
+                    <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                        <h1 class="opacity-0">Agency</h1>
+                        <div
+                            class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                            <h1>Agency</h1>
+                            <h1 class="text-orange-500">Agency</h1>
+                        </div>
+                    </div>
+                    <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                        <h1 class="opacity-0">Contact</h1>
+                        <div
+                            class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                            <h1>Contact</h1>
+                            <h1 class="text-orange-500">Contact</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="flex items-center justify-between w-full p-5 sm:px-10 fixed top-0 left-0 mix-blend-difference z-50">
+            <h1 class="text-6xl text-white font-bold">B.</h1>
+            <div class="p-1 cursor-pointer menu relative text-4xl text-white hover:text-orange-500">
+                <div class="absolute inset-0 z-10 bg-transparent"></div>
+                <div class="menuIcon">
+                    <i class="ri-menu-3-line"></i>
+                </div>
+            </div>
+        </nav>
 
-        <div class="w-full max-w-7xl mx-auto min-h-screen flex flex-col">
+
+        <!-- <section class="min-h-screen text-white flex flex-col items-start justify-center">
+            <div class="h-full overflow-hidden cursor-pointer bg-sky-700 w-full relative text-2xl 2xl:text-6xl group">
+                <h1 class="transform text-yellow-500 opacity-0">Ankit</h1>
+                <div
+                    class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-300 ease-in-out">
+                    <h1 class="transform text-red-800">Ankit</h1>
+                    <h1 class="transform text-green-500">Ankit</h1>
+                </div>
+            </div>
+        </section> -->
+
+
+        <div class="h-screen lg:h-[130vh] xl:h-[160vh] w-full relative p-10 flex flex-col pb-[10vh] lg:pb-[20vh]">
+            <div class="text-[15vw] relative z-10 leading-none font-medium mt-auto  mix-blend-difference">
+                <h1 class="text-white">We</h1>
+                <h1 class="text-white">Design</h1>
+                <h1 class="text-white">Digital</h1>
+                <h1 class="text-white">Experience</h1>
+            </div>
+            <img class="w-full h-full object-cover absolute inset-0"
+                src="https://www.brandium.nl/wp-content/uploads/Apostrophe_brandium-1-scaled.webp" alt="">
+        </div>
+
+        <!-- <div class="w-full max-w-7xl mx-auto min-h-screen flex flex-col">
             <svg class="h-96 w-[1200px] overflow-x-hidden string">
                 <path d="M 10 200 Q 10 200 10 200" stroke="white" stroke-width="2" fill="transparent" />
             </svg>
-        </div>
+        </div> -->
 
 
 
