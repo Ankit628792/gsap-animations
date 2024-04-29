@@ -19,7 +19,7 @@
     <main id="main">
         <div class="scrollAmountContainer fixed z-40 bg-transparnt bottom-0 left-0 p-5 rounded-full">
             <div
-                class="w-20 h-20 rounded-full bg-black p-4 text-white grid place-items-center overflow-hidden">
+                class="w-20 h-20 rounded-full bg-black p-4 text-white grid place-items-center overflow-hidden relative">
                 <div class="absolute top-0 left-0 w-full h-0 bg-orange-600 scrollAmount">
                 </div>
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -82,7 +82,6 @@
         <nav class="flex items-center justify-between w-full p-5 sm:px-10 fixed top-0 left-0 mix-blend-difference z-50">
             <h1 class="text-6xl text-white font-bold">B.</h1>
             <div class="p-1 cursor-pointer menu relative text-4xl text-white hover:text-orange-500">
-                <div class="absolute inset-0 z-10 bg-transparent"></div>
                 <div class="menuIcon">
                     <i class="ri-menu-3-line"></i>
                 </div>
@@ -90,20 +89,11 @@
         </nav>
 
 
-        <!-- <section class="min-h-screen text-white flex flex-col items-start justify-center">
-            <div class="h-full overflow-hidden cursor-pointer bg-sky-700 w-full relative text-2xl 2xl:text-6xl group">
-                <h1 class="transform text-yellow-500 opacity-0">Ankit</h1>
-                <div
-                    class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-300 ease-in-out">
-                    <h1 class="transform text-red-800">Ankit</h1>
-                    <h1 class="transform text-green-500">Ankit</h1>
-                </div>
-            </div>
-        </section> -->
 
 
-        <div class="h-screen lg:h-[130vh] xl:h-[160vh] w-full relative p-10 flex flex-col pb-[10vh] lg:pb-[20vh]">
-            <div class="text-[15vw] relative z-10 leading-none font-medium mt-auto  mix-blend-difference">
+        <header
+            class="h-screen lg:h-[130vh] xl:h-[160vh] w-full relative p-10 flex flex-col pb-[10vh] lg:pb-[20vh] header">
+            <div class="text-[15vw] relative z-10 leading-none font-medium mt-auto mix-blend-difference">
                 <h1 class="text-white">We</h1>
                 <h1 class="text-white">Design</h1>
                 <h1 class="text-white">Digital</h1>
@@ -111,15 +101,39 @@
             </div>
             <img class="w-full h-full object-cover absolute inset-0"
                 src="https://www.brandium.nl/wp-content/uploads/Apostrophe_brandium-1-scaled.webp" alt="">
-        </div>
+        </header>
 
-        <!-- <div class="w-full max-w-7xl mx-auto min-h-screen flex flex-col">
-            <svg class="h-96 w-[1200px] overflow-x-hidden string">
-                <path d="M 10 200 Q 10 200 10 200" stroke="white" stroke-width="2" fill="transparent" />
+
+
+
+        <section class="min-h-screen py-40 px-5 lg:px-10 flex flex-col justify-center ">
+            <div>
+                <h3 class="font-medium text-orange-500 text-xl lg:text-2xl">What we do</h3>
+                <h1
+                    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl  text-white max-w-6xl !leading-[1.5]">
+                    At Brandium® we craft strong brand identities, visually striking website designs, and impactful
+                    marketing campaigns that go beyond the ordinary. We transform your business into a digital
+                    powerhouse.</h1>
+                <div
+                    class="py-3 px-8 bg-white text-black rounded-full max-w-max text-lg flex items-center justify-center gap-4 group overflow-hidden cursor-pointer mt-10">
+                    <span class="z-10">I'm ready to grow</span>
+                    <div
+                        class="w-6 h-6 bg-orange-500 rounded-full relative grid place-items-center transform scale-75 group-hover:scale-100 delay-100">
+                        <div
+                            class="bg-orange-500 w-96 h-96 rounded-full transform scale-0 group-hover:scale-150 duration-500 ease-in-out absolute">
+                        </div>
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="w-6 h-6 transform scale-0 origin-bottom-left group-hover:scale-100 duration-300 ease-in-out delay-100">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <svg class="h-60 w-[1200px] overflow-x-hidden string">
+                <path d="M 10 120 Q 10 120 10 120" stroke="white" stroke-width="2" fill="transparent" />
             </svg>
-        </div> -->
-
-
+        </section>
 
 
         <section class="min-h-screen"></section>
@@ -133,6 +147,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://unpkg.com/lenis@1.0.45-dev.0/dist/lenis.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./index.js"></script>
 </body>
 
