@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://www.brandium.nl/wp-content/uploads/2023/07/cropped-favicon-270x270.png"
+        type="image/x-icon">
 
     <!-- SVG Shapes  -->
     <!-- https://www.svgshapes.in/ -->
@@ -20,10 +22,10 @@
         <div class="scrollAmountContainer fixed z-40 bg-transparnt bottom-0 left-0 p-5 rounded-full">
             <div
                 class="w-20 h-20 rounded-full bg-black p-4 text-white grid place-items-center overflow-hidden relative">
-                <div class="absolute top-0 left-0 w-full h-0 bg-orange-600 scrollAmount">
+                <div class="absolute top-0 left-0 w-full h-0 green__bg scrollAmount">
                 </div>
                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-10 h-10 z-10 relative">
+                    class="w-10 h-10 z-10 relative mix-blend-difference">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                 </svg>
             </div>
@@ -41,7 +43,7 @@
                         <div
                             class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
                             <h1>Home</h1>
-                            <h1 class="text-orange-500">Home</h1>
+                            <h1 class="green__text">Home</h1>
                         </div>
                     </div>
                     <div class="h-full overflow-hidden cursor-pointer w-full relative group">
@@ -49,7 +51,7 @@
                         <div
                             class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
                             <h1>Work</h1>
-                            <h1 class="text-orange-500">Work</h1>
+                            <h1 class="green__text">Work</h1>
                         </div>
                     </div>
                     <div class="h-full overflow-hidden cursor-pointer w-full relative group">
@@ -57,7 +59,7 @@
                         <div
                             class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
                             <h1>Services</h1>
-                            <h1 class="text-orange-500">Services</h1>
+                            <h1 class="green__text">Services</h1>
                         </div>
                     </div>
                     <div class="h-full overflow-hidden cursor-pointer w-full relative group">
@@ -65,7 +67,7 @@
                         <div
                             class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
                             <h1>Agency</h1>
-                            <h1 class="text-orange-500">Agency</h1>
+                            <h1 class="green__text">Agency</h1>
                         </div>
                     </div>
                     <div class="h-full overflow-hidden cursor-pointer w-full relative group">
@@ -73,7 +75,7 @@
                         <div
                             class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
                             <h1>Contact</h1>
-                            <h1 class="text-orange-500">Contact</h1>
+                            <h1 class="green__text">Contact</h1>
                         </div>
                     </div>
                 </div>
@@ -81,15 +83,12 @@
         </div>
         <nav class="flex items-center justify-between w-full p-5 sm:px-10 fixed top-0 left-0 mix-blend-difference z-50">
             <h1 class="text-6xl text-white font-bold">B.</h1>
-            <div class="p-1 cursor-pointer menu relative text-4xl text-white hover:text-orange-500">
+            <div class="p-1 cursor-pointer menu relative text-4xl text-white hover:green__text">
                 <div class="menuIcon">
                     <i class="ri-menu-3-line"></i>
                 </div>
             </div>
         </nav>
-
-
-
 
         <header
             class="h-screen lg:h-[130vh] xl:h-[160vh] w-full relative p-10 flex flex-col pb-[10vh] lg:pb-[20vh] header">
@@ -103,24 +102,21 @@
                 src="https://www.brandium.nl/wp-content/uploads/Apostrophe_brandium-1-scaled.webp" alt="">
         </header>
 
-
-
-
         <section class="min-h-screen py-40 px-5 lg:px-10 flex flex-col justify-center ">
             <div>
-                <h3 class="font-medium text-orange-500 text-xl lg:text-2xl">What we do</h3>
-                <h1
-                    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl  text-white max-w-6xl !leading-[1.5]">
+                <h3 class="font-medium green__text text-xl lg:text-2xl">What we do</h3>
+                <div
+                    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl  text-white max-w-6xl !leading-[1.4] animateWords">
                     At Brandium® we craft strong brand identities, visually striking website designs, and impactful
                     marketing campaigns that go beyond the ordinary. We transform your business into a digital
-                    powerhouse.</h1>
+                    powerhouse.</div>
                 <div
                     class="py-3 px-8 bg-white text-black rounded-full max-w-max text-lg flex items-center justify-center gap-4 group overflow-hidden cursor-pointer mt-10">
                     <span class="z-10">I'm ready to grow</span>
                     <div
-                        class="w-6 h-6 bg-orange-500 rounded-full relative grid place-items-center transform scale-75 group-hover:scale-100 delay-100">
+                        class="w-6 h-6 green__bg rounded-full relative grid place-items-center transform scale-75 group-hover:scale-100 delay-100">
                         <div
-                            class="bg-orange-500 w-96 h-96 rounded-full transform scale-0 group-hover:scale-150 duration-500 ease-in-out absolute">
+                            class="green__bg w-96 h-96 rounded-full transform scale-0 group-hover:scale-150 duration-500 ease-in-out absolute">
                         </div>
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             class="w-6 h-6 transform scale-0 origin-bottom-left group-hover:scale-100 duration-300 ease-in-out delay-100">
@@ -135,8 +131,213 @@
             </svg>
         </section>
 
+        <section class="min-h-screen p-10 pb-[16vw] lg:pb-[10vw]">
+            <div class="text-[13vw] leading-none font-medium max-w-7xl mx-auto text-center text-white animateWords">
+                FEATURED WORK
+            </div>
 
-        <section class="min-h-screen"></section>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto py-20">
+                <div>
+                    <div class="rounded-3xl overflow-hidden h-96 lg:h-[90vh] bg-green-900">
+                        <img class="w-full h-full object-cover hover:scale-110 duration-300 ease-in-out transform"
+                            src="https://www.brandium.nl/wp-content/uploads/De-Online-Psycholoog-brandium-work.webp"
+                            alt="">
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl text-white mt-5">De Online Psycholoog</h1>
+                    <p class="sm:text-lg text-gray-500 my-1">Website, Logo design, Photography</p>
+                </div>
+                <div>
+                    <div class="rounded-3xl overflow-hidden h-96 lg:h-[90vh] bg-green-900">
+                        <img class="w-full h-full object-cover hover:scale-110 duration-300 ease-in-out"
+                            src="https://www.brandium.nl/wp-content/uploads/SK@4x-100-Brandium.jpg" alt="">
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl text-white mt-5">Loop Earplugs</h1>
+                    <p class="sm:text-lg text-gray-500 my-1">Webdesign, Branding, E-commerce, UX/UI</p>
+                </div>
+                <div>
+                    <div class="rounded-3xl overflow-hidden h-96 lg:h-[90vh] bg-green-900">
+                        <img class="w-full h-full object-cover hover:scale-110 duration-300 ease-in-out"
+                            src="https://www.brandium.nl/wp-content/uploads/Apostrophe_brandium-1-scaled.webp" alt="">
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl text-white mt-5">Apostrophe</h1>
+                    <p class="sm:text-lg text-gray-500 my-1">Branding, E-commerce, UX/UI</p>
+                </div>
+                <div>
+                    <div class="rounded-3xl overflow-hidden h-96 lg:h-[90vh] bg-green-900">
+                        <img class="w-full h-full object-cover hover:scale-110 duration-300 ease-in-out"
+                            src="https://www.brandium.nl/wp-content/uploads/2023/04/padthai-web8-scaled.jpg" alt="">
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl text-white mt-5">Pad Thai</h1>
+                    <p class="sm:text-lg text-gray-500 my-1">Branding, E-commerce, UX/UI</p>
+                </div>
+            </div>
+            <div class="flex flex-col xl:flex-row items-center justify-between">
+                <div class="text-white text-xl lg:text-3xl max-w-3xl animateWords">
+                    We've carved out our expertise in branding, webdesign, development, and crafting distinctive digital
+                    products. Our aim is always to empower brands that want to push boundaries, build influence and make
+                    their mark in the digital landscape.
+                    View more projects
+                </div>
+                <div
+                    class="py-3 px-8 bg-white text-black rounded-full max-w-max text-lg flex items-center justify-center gap-4 group overflow-hidden cursor-pointer mt-10">
+                    <span class="z-10">VIew more Projects</span>
+                    <div
+                        class="w-6 h-6 green__bg rounded-full relative grid place-items-center transform scale-75 group-hover:scale-100 delay-100">
+                        <div
+                            class="green__bg w-96 h-96 rounded-full transform scale-0 group-hover:scale-150 duration-500 ease-in-out absolute">
+                        </div>
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="w-6 h-6 transform scale-0 origin-bottom-left group-hover:scale-100 duration-300 ease-in-out delay-100">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen bg-gray-100 p-10 pb-[16vw] lg:pb-[10vw]">
+            <section class="py-[16vw] lg:py-[10vw]">
+                <div class="text-[12vw] leading-none font-medium max-w-7xl mx-auto text-center animateWords">CLIENTS WE
+                    CALL FAMILY
+                </div>
+            </section>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto gap-20 place-items-center">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/2023/03/11.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/loop-earplugs.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/apostrophe-logo.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/Panchos-amsterdam.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/loop-earplugs.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/apostrophe-logo.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/Panchos-amsterdam.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/2023/03/11.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/2023/03/11.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/loop-earplugs.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/apostrophe-logo.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/Panchos-amsterdam.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/loop-earplugs.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/apostrophe-logo.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/Panchos-amsterdam.png" alt="">
+                <img class="h-16" src="https://www.brandium.nl/wp-content/uploads/2023/03/11.png" alt="">
+            </div>
+        </section>
+
+        <section class="bg-gray-100">
+            <section class="py-[12vw] lg:py-[8vw]">
+                <div class="text-[12vw] leading-none font-medium max-w-7xl mx-auto text-center animateWords">LATEST NEWS
+                </div>
+            </section>
+
+            <div class="news">
+                <div class="w-full px-5 sm:px-10 lg:px-20 pt-10 news_wrapper">
+                    <div class="absolute w-full h-full bg-transparent z-10 "></div>
+                    <div class="border-b w-full border-gray-600 my-10"></div>
+                    <div class="w-full max-w-7xl flex flex-col lg:flex-row gap-x-6 lg:items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="font-medium py-1.5 px-3 rounded-full border border-gray-700">AWARDS</div>
+                                <p class="text-gray-600 text-lg">5 min.</p>
+                            </div>
+                            <div class=" max-w-md my-4 overflow-hidden lg:fixed lg:w-0 news_img z-20 ">
+                                <img class="w-full h-full object-cover"
+                                    src="https://www.brandium.nl/wp-content/uploads/SK@4x-100-Brandium.jpg" alt="">
+                            </div>
+                            <h1 class="text-5xl font-medium max-w-lg lg:max-w-md leading-tight lg:py-10">Four Awards in
+                                Branding & Webdesign</h1>
+                            <p class="text-gray-600 text-lg my-4">03.12.2023</p>
+                        </div>
+                        <div class="max-w-xl text-lg text-gray-600">
+                            It’s a moment of immense pride and joy at Brandium Agency, a renowned branding and webdesign
+                            agency. We’re thrilled to announce that we’ve been honored with not one, but four
+                            prestigious
+                            awards, recognizing our unparalleled expertise in UX/UI design, innovation, and overall
+                            excellence in webdesign.
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-5 sm:px-10 lg:px-20 pb-20 pt-10 news_wrapper relative">
+                    <div class="absolute w-full h-full bg-transparent z-10 "></div>
+                    <div class="border-b w-full border-gray-600 my-10"></div>
+                    <div class="w-full max-w-7xl flex flex-col lg:flex-row gap-x-6 lg:items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="font-medium py-1.5 px-3 rounded-full border border-gray-700">NEWS</div>
+                                <p class="text-gray-600 text-lg">4 min.</p>
+                            </div>
+                            <div class=" max-w-md my-4 overflow-hidden lg:absolute lg:w-0 news_img z-20 ">
+                                <img class="w-full h-full object-cover"
+                                    src="https://www.brandium.nl/wp-content/uploads/killer-brand-image.jpg" alt="">
+                            </div>
+                            <h1 class="text-5xl font-medium max-w-lg lg:max-w-md leading-tight lg:py-10">How to Build a
+                                Killer Brand Image</h1>
+                            <p class="text-gray-600 text-lg my-4">27.12.2023</p>
+                        </div>
+                        <div class="max-w-xl text-lg text-gray-600">
+                            Today’s businesses understand that a brand is more than just a name, logo or colors. It’s
+                            about
+                            shaping a powerful brand image that resonates with your audience, creating trust and
+                            loyalty.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <div
+                class="marque__container green__bg px-10 py-0 lg:py-10 flex items-center justify-center text-6xl lg:text-8xl font-medium">
+                <div class="marque__div flex items-center gap-20">
+                    <div class="marque flex items-center gap-20 shrink-0 py-10">
+                        <h1>Thrive beyond limits</h1>
+                        <img class=" h-16 lg:h-20" src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                            alt="">
+                    </div>
+                    <div class="marque flex items-center gap-20 shrink-0 py-10">
+                        <h1>Thrive beyond limits</h1>
+                        <img class=" h-16 lg:h-20" src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                            alt="">
+                    </div>
+                    <div class="marque flex items-center gap-20 shrink-0 py-10">
+                        <h1>Thrive beyond limits</h1>
+                        <img class=" h-16 lg:h-20" src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section
+            class=" text-white p-5 sm:p-10 lg:p-20 pt-20 flex flex-col gap-20 items-start sm:flex-row justify-between">
+            <div class="grid grid-cols-2 gap-16 sm:gap-20">
+                <ul class="flex flex-col gap-6">
+                    <h1 class="green__text text-2xl mb-6 uppercase">Follow us</h1>
+                    <li class="text-xl">Awwards</li>
+                    <li class="text-xl">Linkedin</li>
+                    <li class="text-xl">Instagram</li>
+                    <li class="text-xl">Facebook</li>
+                </ul>
+                <ul class="flex flex-col gap-6">
+                    <h1 class="green__text text-2xl mb-6 uppercase">Navigation</h1>
+                    <li class="text-xl">Work</li>
+                    <li class="text-xl">Agency</li>
+                    <li class="text-xl">Services</li>
+                    <li class="text-xl">Insights</li>
+                    <li class="text-xl">Contact</li>
+                </ul>
+            </div>
+            <div class="sm:text-right">
+                <h1 class="green__text text-2xl mb-6 uppercase">Let's Connect</h1>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium">hello@brandium.nl</h1>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium">020 - 210 1622</h1>
+            </div>
+        </section>
+
+        <div
+            class="flex flex-col sm:flex-row justify-between gap-2 text-white text-xl pt-10 pb-20 px-5 sm:px-10 lg:px-20">
+            <p>Brandium® Agency</p>
+            <p>All rights reserved | 2023</p>
+            <p>Based in Netherland</p>
+        </div>
 
 
 

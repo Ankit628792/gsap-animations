@@ -38,7 +38,7 @@ main.addEventListener("mousemove", function (el) {
     gsap.to(cursor, {
         x: el.x,
         y: el.y,
-        ease: "power4.out"
+        ease: "power4.out",
     })
 })
 
@@ -131,5 +131,95 @@ stringPath.addEventListener("mouseleave", function () {
         },
         duration: 1,
         ease: "elastic.out(1.2,0.1)"
+    })
+})
+
+window.addEventListener("wheel", function (el) {
+    if (el.deltaY > 0) {
+        gsap.to(".marque__container .marque__div", {
+            transform: "translateX(-40%)",
+            duration: 4,
+            repeat: -1,
+            ease: 'none'
+        })
+        gsap.to(".marque__container .marque img", {
+            rotate: 180
+        })
+    }
+    else {
+        gsap.to(".marque__container .marque__div", {
+            transform: "translateX(40%)",
+            duration: 4,
+            repeat: -1,
+            ease: 'none'
+        })
+        gsap.to(".marque__container .marque img", {
+            rotate: 0
+        })
+    }
+})
+
+function animateWords() {
+    let wordContainers = document.querySelectorAll(".animateWords");
+    wordContainers.forEach(async (wordContainer, idx) => {
+
+        let words = wordContainer.textContent.split(" ");
+
+        let finalWords = ""
+        for (let i = 0; i < words.length; i++) {
+            let word = words[i];
+            if (word?.trim())
+                finalWords += `<div class="h-full overflow-hidden inline-block"><span class="word${idx} inline-block">${word}&nbsp;</span></div>`;
+        }
+        wordContainer.innerHTML = finalWords;
+        gsap.from(`.animateWords .word${idx}`, {
+            y: 40,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: wordContainer,
+                start: "top 70%",
+                toggleActions: 'restart none none reset'
+            }
+        })
+    })
+
+}
+
+animateWords()
+
+
+let newsList = document.querySelectorAll(".news_wrapper")
+
+newsList.forEach((news, idx) => {
+
+    news.addEventListener("mousemove", (el) => {
+        gsap.to(news.querySelector(".news_img"), {
+            width: "100%",
+            x: el.x,
+            y: el.y,
+            top: -300,
+            left: -300,
+            ease: "power4.out"
+        })
+
+        gsap.to(".news", {
+            backgroundColor: idx == 0 ? "rgba(255,215,231,1)" : "rgba(186,196,226,1)"
+        })
+    })
+    news.addEventListener("mouseleave", (el) => {
+        console.log("leave")
+        gsap.to(news.querySelector(".news_img"), {
+            width: "0%",
+            x: el.x,
+            y: el.y,
+            top: 0,
+            left: 0,
+            ease: "power4.out"
+        })
+        gsap.to(".news", {
+            backgroundColor: "transparent"
+        })
     })
 })
