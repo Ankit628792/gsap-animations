@@ -1,0 +1,34 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    /* cursor: none; */
+}
+
+.green__bg{
+    background-color: #9AE975;
+}
+
+.green__text{
+    color: #9AE975;
+}
+
+
+.full__screen__nav h1 {
+    transform-origin: bottom left;
+}

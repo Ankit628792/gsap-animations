@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WizardZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div
+        class="full__screen__nav fixed top-0 -right-full bottom-0 w-full max-w-xl bg-black text-white flex flex-col items-center justify-center p-10 sm:px-20 z-50">
+        <div class="flex flex-col w-full gap-5">
+            <div class="mb-6 menuTitle">
+                <h4 class="text-lg py-2 font-light">Menu</h4>
+                <div class="h-0.5 border-b-[1px] border-gray-500 w-0 bar"></div>
+            </div>
+            <div class="flex flex-col gap-2 text-4xl leading-normal px-5">
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">Home</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>Home</h1>
+                        <h1 class="green__text">Home</h1>
+                    </div>
+                </div>
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">About us</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>About us</h1>
+                        <h1 class="green__text">About us</h1>
+                    </div>
+                </div>
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">Services</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>Services</h1>
+                        <h1 class="green__text">Services</h1>
+                    </div>
+                </div>
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">Use Cases</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>Use Cases</h1>
+                        <h1 class="green__text">Use Cases</h1>
+                    </div>
+                </div>
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">Pricing</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>Pricing</h1>
+                        <h1 class="green__text">Pricing</h1>
+                    </div>
+                </div>
+                <div class="h-full overflow-hidden cursor-pointer w-full relative group">
+                    <h1 class="opacity-0">Blogs</h1>
+                    <div
+                        class="absolute top-0 left-0 w-full transform group-hover:-translate-y-1/2 transition-transform duration-500 ease-in-out">
+                        <h1>Blogs</h1>
+                        <h1 class="green__text">Blogs</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main id="main">
+        <section class="w-full">
+            <nav class="flex items-center justify-between w-full py-5 px-5 md:px-10 xl:px-20">
+                <h1 class="text-3xl flex items-center gap-1 font-semibold">
+                    <i class="ri-shining-2-fill transform rotate-45 text-4xl"></i>
+                    <span>
+                        WizardZ
+                    </span>
+                </h1>
+                <div
+                    class="bg-black p-1 text-2xl text-white rounded-full w-10 h-10 grid place-items-center lg:hidden cursor-pointer menu z-50 menuIcon">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+                <ul class="items-center justify-end gap-10 text-lg hidden lg:flex">
+                    <li>About us</li>
+                    <li>Services</li>
+                    <li>Use Cases</li>
+                    <li>Pricing</li>
+                    <li>Blogs</li>
+                    <li>
+                        <button class="py-1 px-6 rounded-lg border font-semibold">Request a quote</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <header
+                class="flex flex-col-reverse lg:flex-row items-center justify-between min-h-[90dvh] p-5 sm:p-10 xl:p-20 gap-5">
+                <div class="content max-w-xl">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl max-w-xl lg:max-w-md font-semibold">
+                        Navigating the
+                        digital space for success</h1>
+                    <p class="text-gray-500 text-lg sm:text-xl py-3 sm:py-6">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit.
+                        Harum,
+                        rerum? Nihil porro quis
+                        voluptates ut consequuntur explicabo asperiores, fugit animi voluptatibus! Sint hic itaque
+                    </p>
+                    <button class="py-2 px-6 rounded-lg border font-medium bg-black text-white text-xl">Book a
+                        consultant</button>
+                </div>
+                <div class="header_image w-full max-w-xl">
+                    <img class="h-full w-full object-contain"
+                        src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+                </div>
+            </header>
+            <div
+                class="p-5 lg:py-0 sm:px-10 xl:px-20 flex flex-wrap gap-4 items-center justify-center lg:justify-between clients">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-amazon-71-789436.png" alt="">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-dribbble-48-282370.png" alt="">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-hubspot-282260.png" alt="">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-youtube-80-189751.png" alt="">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-netflix-282224.png" alt="">
+                <img class="h-20 lg:h-40 filter grayscale hover:grayscale-0"
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-zoom-2471913-2050545.png" alt="">
+            </div>
+        </section>
+
+        <section class="p-5 sm:p-10 xl:p-20">
+            <div class="services flex flex-col md:flex-row items-center gap-6">
+                <h3 class="text-4xl sm:text-5xl font-medium green__bg py-1 px-3 rounded">Services</h3>
+                <p class="text-gray-500 max-w-xl text-center md:text-left">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Eos vitae
+                    veniam quidem quas veritatis
+                    voluptates perferendis rerum laborum, neque qui.</p>
+            </div>
+            <div class="container grid grid-cols-1 md:grid-cols-2 place-items-center pt-10 lg:pt-20 gap-10 2xl:gap-20">
+                <div
+                    class="elem left bg-white w-full max-w-lg h-full flex flex-col-reverse md:flex-row border gap-4 md:gap-0 shadow-lg rounded-2xl p-6">
+                    <div class="flex-grow flex flex-col justify-between">
+                        <h2 class="text-3xl sm:text-4xl text-white mix-blend-difference max-w-max">Search Engine
+                            Optimization</h2>
+                        <div class="h-6 md:h-16"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 rounded-full bg-white mix-blend-difference">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 text-white mix-blend-difference">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </div>
+                            <span class="text-white mix-blend-difference text-xl">Learn More</span>
+                        </div>
+                    </div>
+                    <img class="h-full w-40 object-contain"
+                        src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+                </div>
+                <div
+                    class="elem right bg-black w-full max-w-lg h-full flex flex-col-reverse md:flex-row border gap-4 md:gap-0 shadow-lg rounded-2xl p-6">
+                    <div class="flex-grow flex flex-col justify-between">
+                        <h2 class="text-3xl sm:text-4xl text-white mix-blend-difference max-w-max">Pay per click
+                            advertizing</h2>
+                        <div class="h-6 md:h-16"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 rounded-full bg-white mix-blend-difference">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 text-white mix-blend-difference">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </div>
+                            <span class="text-white mix-blend-difference text-xl">Learn More</span>
+                        </div>
+                    </div>
+                    <img class="h-full w-40 object-contain"
+                        src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+                </div>
+                <div
+                    class="elem left bg-black w-full max-w-lg h-full flex flex-col-reverse md:flex-row border gap-4 md:gap-0 shadow-lg rounded-2xl p-6">
+                    <div class="flex-grow flex flex-col justify-between">
+                        <h2 class="text-3xl sm:text-4xl text-white mix-blend-difference max-w-max">Social media
+                            marketing</h2>
+                        <div class="h-6 md:h-16"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 rounded-full bg-white mix-blend-difference">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 text-white mix-blend-difference">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </div>
+                            <span class="text-white mix-blend-difference text-xl">Learn More</span>
+                        </div>
+                    </div>
+                    <img class="h-full w-40 object-contain"
+                        src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+                </div>
+                <div
+                    class="elem right bg-white w-full max-w-lg h-full flex flex-col-reverse md:flex-row border gap-4 md:gap-0 shadow-lg rounded-2xl p-6">
+                    <div class="flex-grow flex flex-col justify-between">
+                        <h2 class="text-3xl sm:text-4xl text-white mix-blend-difference max-w-max">E-mail marketing</h2>
+                        <div class="h-6 md:h-16"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 rounded-full bg-white mix-blend-difference">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5 text-white mix-blend-difference">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </div>
+                            <span class="text-white mix-blend-difference text-xl">Learn More</span>
+                        </div>
+                    </div>
+                    <img class="h-full w-40 object-contain"
+                        src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="min-h-screen p-5 sm:px-10 xl:px-20">
+            <div
+                class="promo overflow-hidden w-full bg-gray-200 rounded-3xl p-5 lg:p-10 flex gap-10 flex-col-reverse md:flex-row items-center justify-between my-20">
+                <div>
+                    <h1 class="text-3xl font-semibold">Let's make things happens</h1>
+                    <p class="text-gray-500 my-3 max-w-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Odit dolor similique quaerat veritatis
+                        consequuntur explicabo facere!</p>
+                    <button class="py-2 px-6 rounded-lg border font-medium bg-black text-white text-lg">Set your free
+                        proposal</button>
+                </div>
+                <img class="h-60" src="https://www.unicuscreatives.in/media/graphics/homepage-megaphone.svg" alt="">
+            </div>
+
+            <div class="case_study  flex flex-col md:flex-row items-center gap-6 pt-20">
+                <h3 class="text-4xl sm:text-5xl font-medium green__bg py-1 px-3 rounded">Case Study</h3>
+                <p class="text-gray-500 max-w-xl text-center md:text-left">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Eos vitae
+                    veniam quidem quas veritatis
+                    voluptates perferendis rerum laborum, neque qui.</p>
+            </div>
+
+            <div
+                class="studies overflow-hidden bg-black my-20 rounded-3xl flex flex-wrap xl:flex-nowrap py-10 xl:py-5 gap-0 justify-evenly">
+                <div class="max-w-sm p-5 md:p-10">
+                    <p class="text-white line-clamp-4 md:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Id eius
+                        voluptatibus
+                        quidem quod, quam
+                        dignissimos fuga! Doloribus nulla dolorum reiciendis, et obcaecati, ipsum impedit repudiandae
+                        quibusdam soluta nam odio?</p>
+                    <div class="green__text flex items-center gap-2 md:text-lg mt-5">
+                        <span>Learn More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="max-w-sm p-5 md:p-10 ">
+                    <p class="text-white line-clamp-4 md:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Id eius
+                        voluptatibus
+                        quidem quod, quam
+                        dignissimos fuga! Doloribus nulla dolorum reiciendis, et obcaecati, ipsum impedit repudiandae
+                        quibusdam soluta nam odio?</p>
+                    <div class="green__text flex items-center gap-2 md:text-lg mt-5">
+                        <span>Learn More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="max-w-sm p-5 md:p-10">
+                    <p class="text-white line-clamp-4 md:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Id eius
+                        voluptatibus
+                        quidem quod, quam
+                        dignissimos fuga! Doloribus nulla dolorum reiciendis, et obcaecati, ipsum impedit repudiandae
+                        quibusdam soluta nam odio?</p>
+                    <div class="green__text flex items-center gap-2 md:text-lg mt-5">
+                        <span>Learn More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45-dev.0/dist/lenis.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
