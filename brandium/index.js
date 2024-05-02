@@ -58,7 +58,6 @@ menu.addEventListener("mouseenter", function (el) {
     })
 })
 menu.addEventListener("mouseleave", function (el) {
-    console.log("first")
     gsap.to(cursor, {
         background: "white",
         scale: 1,
@@ -162,9 +161,7 @@ window.addEventListener("wheel", function (el) {
 function animateWords() {
     let wordContainers = document.querySelectorAll(".animateWords");
     wordContainers.forEach(async (wordContainer, idx) => {
-
         let words = wordContainer.textContent.split(" ");
-
         let finalWords = ""
         for (let i = 0; i < words.length; i++) {
             let word = words[i];
@@ -193,7 +190,6 @@ animateWords()
 let newsList = document.querySelectorAll(".news_wrapper")
 
 newsList.forEach((news, idx) => {
-
     news.addEventListener("mousemove", (el) => {
         gsap.to(news.querySelector(".news_img"), {
             width: "100%",
@@ -209,7 +205,6 @@ newsList.forEach((news, idx) => {
         })
     })
     news.addEventListener("mouseleave", (el) => {
-        console.log("leave")
         gsap.to(news.querySelector(".news_img"), {
             width: "0%",
             x: el.x,
