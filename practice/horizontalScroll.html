@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="min-h-screen w-full bg-black grid place-items-center text-5xl p-10 text-white">
+        <h1>Before Horizontal Scroll</h1>
+    </section>
+
+    <div class="outer w-screen overflow-hidden h-full">
+        <div class="slider flex">
+            <section class="h-screen w-screen shrink-0 bg-sky-600"></section>
+            <section class="h-screen w-screen shrink-0 bg-pink-600"></section>
+            <section class="h-screen w-screen shrink-0 bg-green-600"></section>
+            <section class="h-screen w-screen shrink-0 bg-purple-600"></section>
+        </div>
+    </div>
+
+
+    <section class="min-h-screen w-full bg-black grid place-items-center text-5xl p-10 text-white">
+        <h1>After Horizontal Scroll</h1>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45-dev.0/dist/lenis.min.js"></script>
+    <script>
+
+        const lenis = new Lenis()
+        lenis.on('scroll', ScrollTrigger.update)
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 800)
+        })
+        gsap.ticker.lagSmoothing(0)
+
+        const slider = document.querySelector(".slider");
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: slider,
+                end: () => "+=" + slider.offsetWidth,
+                scrub: 1.2,
+                pin: true,
+            }
+        })
+
+        tl.to(slider, {
+            xPercent: -300,
+        })
+
+    </script>
+</body>
+
+</html>
