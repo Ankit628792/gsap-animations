@@ -11,12 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&family=Righteous&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         html,
-        body,
-        main {
+        body {
             width: 100%;
             height: 100%;
         }
@@ -28,6 +28,7 @@
         body::-webkit-scrollbar {
             display: none;
         }
+
         .scroll-hidden::-webkit-scrollbar {
             display: none;
         }
@@ -55,13 +56,18 @@
         .righteous {
             font-family: "Righteous", sans-serif;
         }
+
+        .text__content h1 {
+            transform: translateY(200px);
+            opacity: 0;
+        }
     </style>
 </head>
 
 <body>
 
-    <section class="bg-body p-5 lg:px-10 fixed w-full top-0 left-0 z-50 transform -translate-y-full">
-        <h1 class="text-2xl cursor-pointer absolute top-7 right-7">Close</h1>
+    <section class="bg-body p-5 lg:px-10 fixed w-full top-0 left-0 z-50 transform -translate-y-full navbar">
+        <h1 class="text-2xl cursor-pointer absolute top-7 right-7 close">Close</h1>
         <div class="w-full grid grid-cols-6 lg:grid-cols-7 gap-y-10">
 
             <div class="col-span-2 hidden md:block py-5">
@@ -98,29 +104,34 @@
 
     </section>
 
-    <main>
-        <section id="page1" class="relative w-full h-dvh p-5 md:px-10 py-10 flex flex-col justify-between">
+    <main class="smooth-scroll">
+        <header id="header"
+            class="relative w-full h-dvh overflow-hidden p-5 md:px-10 py-10 flex flex-col justify-between">
+            <div id="cursor"
+                class="fixed w-28 h-28 rounded-full z-10 flex-col items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm text-white hidden sm:flex">
+                <h2>Play Reel</h2>
+            </div>
             <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover -z-10"
                 src="./assets/header.mp4"></video>
-            <nav class="flex items-center justify-between w-full">
+            <nav class="flex items-center justify-between w-full z-20">
                 <h1 class="text-white text-xl cursor-pointer">The Venture Agency</h1>
-                <div class="cursor-pointer">
+                <div class="cursor-pointer menu">
                     <h1 class="text-white text-2xl">Menu</h1>
                 </div>
 
             </nav>
 
             <h1
-                class="heading text-white font-bold comfortaa text-7xl sm:text-[22vw] text-center select-none leading-[1.15]">
+                class="heading overflow-hidden text-white font-bold comfortaa text-7xl sm:text-[22vw] text-center select-none leading-[1.15] z-20">
                 rejouice
             </h1>
-        </section>
+        </header>
 
 
-        <section class="p-5 md:px-10 py-20">
+        <section class="p-5 md:px-10 py-20 text__content page2">
             <div class="flex flex-col gap-1 sm:flex-row justify-between py-2 border-b border-black">
-                <h1 class="text-lg">Tomorrow's Brands, Today</h1>
-                <h1 class="text-lg">Paris / San Diego</h1>
+                <h3 class="text-lg">Tomorrow's Brands, Today</h1>
+                    <h3 class="text-lg">Paris / San Diego</h1>
             </div>
             <h1 class="text-2xl sm:text-[4vw] leading-tight my-8 tracking-tight">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We
                 are a venture firm and digital agency. Our mission is to transform founders' visions into remarkable
@@ -140,10 +151,10 @@
             </div>
         </section>
 
-        <section class="p-5 md:px-10 py-20">
+        <section class="p-5 md:px-10 py-20 text__content">
             <div class="flex flex-col gap-1 sm:flex-row justify-between py-2 border-b border-black">
-                <h1 class="text-lg sm:text-xl md:text-2xl">Transforming visions into brands</h1>
-                <h1 class="text-xl sm:text-2xl md:text-3xl">See the work</h1>
+                <h3 class="text-lg sm:text-xl md:text-2xl">Transforming visions into brands</h1>
+                    <h3 class="text-xl sm:text-2xl md:text-3xl">See the work</h1>
             </div>
 
             <section class="flex gap-4 overflow-x-auto scroll-hidden items-center w-full my-6">
@@ -171,10 +182,10 @@
             </section>
         </section>
 
-        <section class="p-5 md:px-10 py-20">
+        <section class="p-5 md:px-10 py-20 text__content">
             <div class="flex flex-col justify-between py-2 border-b border-black">
-                <h1 class="text-lg">We operate on a simple philosophy:</h1>
-                <h1 class="text-xl font-medium">Quality over quantity.</h1>
+                <h3 class="text-lg">We operate on a simple philosophy:</h1>
+                    <h3 class="text-xl font-medium">Quality over quantity.</h1>
             </div>
             <h1 class="text-2xl sm:text-[4vw] leading-tight my-8 tracking-tight">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 We partner with up to 5 clients each year. This allows intense focus on the transformation and launch of
@@ -184,9 +195,12 @@
         </section>
 
         <section class="min-h-[70dvh] max-h-screen flex flex-col items-center justify-center">
-            <div class="h-full w-full max-w-5xl relative">
+            <div class="h-full w-full max-w-5xl relative cursor-pointer book__seat">
                 <video autoplay loop muted class="w-full h-full object-cover" src="./assets/blob.webm"></video>
                 <div class="absolute p-5 z-10 inset-0 flex flex-col items-center justify-center">
+                    <svg class="absolute w-full h-full" viewBox="0 0 100 100">
+                        <circle cx="50" cy="1" r="1" fill="#fff"></circle>
+                    </svg>
                     <div
                         class=" border rounded-full w-96 h-96 sm:w-[500px] sm:h-[500px] lg:w-[550px] lg:h-[550px] max-w-xl flex flex-col items-center justify-center text-white gap-1">
                         <h1 class="text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight">3 seats</h1>
@@ -196,10 +210,10 @@
             </div>
         </section>
 
-        <section class="p-5 md:px-10 py-20">
+        <section class="p-5 md:px-10 py-20 text__content">
             <div class="flex flex-col justify-between py-2 border-b border-black">
-                <h1 class="text-lg">Strategy & emotion.</h1>
-                <h1 class="text-xl font-medium">You need both.</h1>
+                <h3 class="text-lg">Strategy & emotion.</h1>
+                    <h3 class="text-xl font-medium">You need both.</h1>
             </div>
             <h1 class="text-2xl sm:text-[4vw] leading-tight my-8 tracking-tight">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Data matters, yet it’s the emotion that drives buying decisions. We don’t believe in ‘one size fits
@@ -246,13 +260,13 @@
         </section>
 
 
-        <section
+        <footer
             class="min-h-screen flex flex-col gap-20 lg:gap-10 xl:gap-0 justify-end xl:justify-between  bg-black text-body px-5 py-10 lg:px-10">
 
             <div class="flex flex-col gap-y-8 sm:flex-row items-start justify-between">
                 <div>
                     <h1 class="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-4">Relax. We've got you.</h1>
-                    <button class="border rounded-full py-3 px-6">Take a seat</button>
+                    <button class="border rounded-full py-3 px-6 take_seat">Take a seat</button>
                 </div>
                 <div class="flex w-full max-w-96 items-start justify-between">
                     <ul>
@@ -287,27 +301,48 @@
 
                 </div>
             </div>
-            <h1 class="heading font-bold comfortaa text-7xl sm:text-[22vw] text-center select-none leading-[1.15]">
+            <h1
+                class="heading overflow-hidden font-bold comfortaa text-7xl sm:text-[22vw] text-center select-none leading-[1.15]">
                 rejouice
             </h1>
-        </section>
+        </footer>
 
     </main>
 
 
+    <section class="reel fixed transform -translate-x-full z-40 inset-0 bg-black grid place-items-center p-5">
+        <div
+            class="w-12 h-12 sm:w-16 sm:h-16 border border-white text-white grid place-items-center rounded-full text-3xl absolute top-5 right-5 z-50 bg-black cursor-pointer close">
+            &#x2715;
+        </div>
+
+        <video autoplay controls class="w-full max-h-[95dvh] object-contain"
+            src="https://121vod-adaptive.akamaized.net/exp=1715578342~acl=%2F1843ffcb-eccb-4a26-b4e7-e4fa53e38710%2F%2A~hmac=5f624866defc51a930786500fa295951adf305e0786131414529f3ff8f7d5d22/1843ffcb-eccb-4a26-b4e7-e4fa53e38710/parcel/video/b07285a1.mp4"></video>
+    </section>
+
+    <section
+        class="seat transform -translate-x-full fixed z-40 inset-0 bg-black flex flex-col items-center justify-center gap-2 p-5 text-body">
+        <div
+            class="w-12 h-12 sm:w-16 sm:h-16 border border-white text-white grid place-items-center rounded-full text-3xl absolute top-5 right-5 z-50 bg-black cursor-pointer close">
+            &#x2715;
+        </div>
+
+        <h2 class="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">Don’t be shy. Say Hi! 👋</h2>
+        <h1 class="cursor-pointer text-4xl sm:text-[10vw] sm:leading-tight">biz@rejouice.com</h1>
+
+    </section>
+
+    <section class="loader fixed z-40 inset-0 bg-black flex flex-col items-center justify-center gap-2 p-5 text-body">
+        <h2 class="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl overflow-hidden">Tomorrow's Brands, Today
+        </h2>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.0.45-dev.0/dist/lenis.min.js"></script>
-
-    <script>
-
-        const lenis = new Lenis()
-        lenis.on('scroll', ScrollTrigger.update)
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 800)
-        })
-        gsap.ticker.lagSmoothing(0)
-    </script>
+    <script src="./smooth-scroll.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
